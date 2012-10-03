@@ -1,4 +1,5 @@
-backbone-view
-=============
 
-Backbone.js View modifications for component(1)
+# backbone-view
+
+  Backbone.js View modifications for component(1)
+

@@ -1,0 +1,10 @@
+{
+  "name": "backbone-view",
+  "repo": "perfectt/backbone-view",
+  "description": "Backbone.js View modifications for component(1)",
+  "version": "0.9.2",
+  "scripts": [ "index.js" ],
+  "dependencies": {
+    "perfectt/backbone": "0.9.2"
+  }
+}
