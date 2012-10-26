@@ -30,7 +30,7 @@ View.prototype.setup = function() {
     if (rendered) {
       this.delegateEvents();
     } else {
-      this.remove();
+      this.undelegateEvents();
     }
   }, this);
 };
