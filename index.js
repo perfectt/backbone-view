@@ -10,7 +10,9 @@ var Backbone = require('backbone')
  * Export extended view
  */
 
-var View = module.exports = Backbone.View.extend();
+var View = module.exports = Backbone.View.extend({
+  template: function(){}
+});
 
 /**
  * Setup, called on initialize
@@ -27,12 +29,29 @@ View.prototype.setup = function() {
       view.trigger('renderedStateChange', rendered);
     });
 
-    if (rendered) {
-      this.delegateEvents();
-    } else {
+    if (!rendered) {
       this.undelegateEvents();
     }
   }, this);
+  return this;
+};
+
+/**
+ * Default initialize
+ */
+
+View.prototype.initialize = function() {
+  this.setup();
+  return this;
+};
+
+/**
+ * Default render
+ */
+
+View.prototype.render = function() {
+  this.$el.html(this.template());
+  return this;
 };
 
 /**
@@ -56,4 +75,6 @@ View.prototype.destroy = function() {
   _.each(this.views, function(view) {
     view.destroy();
   });
+
+  this.remove();
 };
