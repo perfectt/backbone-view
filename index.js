@@ -11,7 +11,7 @@ var Backbone = require('backbone')
  */
 
 var View = module.exports = Backbone.View.extend({
-  template: function(){}
+  template: '<div></div>'
 });
 
 /**
@@ -50,7 +50,7 @@ View.prototype.initialize = function() {
  */
 
 View.prototype.render = function() {
-  this.$el.html(this.template());
+  this.$el.html(this.template);
   return this;
 };
 
