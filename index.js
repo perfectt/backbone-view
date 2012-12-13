@@ -88,5 +88,5 @@ View.prototype.destroy = function() {
  */
 
 View.prototype.navigate = function(route, options) {
-  Backbone.history.navigate(route, options);
+  Backbone.history.navigate(route, options || { trigger: true });
 };

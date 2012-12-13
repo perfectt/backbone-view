@@ -2,7 +2,7 @@
   "name": "backbone-view"
 , "repo": "perfectt/backbone-view"
 , "description": "Backbone.js View modifications for component(1)"
-, "version": "0.0.5"
+, "version": "0.0.6"
 , "scripts": [ "index.js" ]
 , "dependencies": {
     "component/underscore": "*"
