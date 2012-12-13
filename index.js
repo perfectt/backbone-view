@@ -82,3 +82,11 @@ View.prototype.destroy = function() {
 
   this.remove();
 };
+
+/**
+ * Default Backbone History navigate
+ */
+
+View.prototype.navigate = function(route, options) {
+  Backbone.history.navigate(route, options);
+};
